@@ -78,6 +78,52 @@ xui.Class('App.ColumnsMixed55', 'xui.Module',{
                 "main"
             );
             
+            host.ctl_layout13.append(
+                xui.create("xui.UI.TreeView")
+                .setHost(host,"xui_ui_treeview9")
+                .setItems([
+                    {
+                        "id" : "node1",
+                        "sub" : [
+                            "node11",
+                            {
+                                "id" : "node12",
+                                "imageClass" : "xui-icon-xui"
+                            },
+                            "node13",
+                            "node14"
+                        ],
+                        "caption" : "node1"
+                    },
+                    {
+                        "id" : "node2",
+                        "iniFold" : false,
+                        "caption" : "node2",
+                        "sub" : [
+                            {
+                                "id" : "node21",
+                                "caption" : "node21"
+                            },
+                            {
+                                "id" : "node22",
+                                "caption" : "node22"
+                            },
+                            {
+                                "id" : "node23",
+                                "caption" : "node23"
+                            },
+                            {
+                                "id" : "node24",
+                                "caption" : "node24"
+                            }
+                        ]
+                    }
+                ])
+                .setLeft("0em")
+                .setTop("0em"),
+                "before"
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         }
