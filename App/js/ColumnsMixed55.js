@@ -73,8 +73,8 @@ xui.Class('App.ColumnsMixed55', 'xui.Module',{
             );
             
             host.ctl_layout13.append(
-                xui.create("xui.Module.JSONEditor", "xui.Module")
-                .setHost(host,"xui_module_jsoneditor3"),
+                xui.create("xui.Module.PageGrid", "xui.Module")
+                .setHost(host,"xui_module_pagegrid1"),
                 "main"
             );
             
@@ -122,6 +122,83 @@ xui.Class('App.ColumnsMixed55', 'xui.Module',{
                 .setLeft("0em")
                 .setTop("0em"),
                 "before"
+            );
+            
+            host.ctl_layout5.append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput52")
+                .setDirtyMark(false)
+                .setLeft("52.57142857142857em")
+                .setTop("6.095238095238095em")
+                .setLabelGap("0.3333333333333333em")
+                .setType("listbox")
+                .setItems([
+                    {
+                        "id" : "default",
+                        "caption" : "default"
+                    },
+                    {
+                        "id" : "army",
+                        "caption" : "army"
+                    },
+                    {
+                        "id" : "classic",
+                        "caption" : "classic"
+                    },
+                    {
+                        "id" : "darkblue",
+                        "caption" : "darkblue"
+                    },
+                    {
+                        "id" : "electricity",
+                        "caption" : "electricity"
+                    },
+                    {
+                        "id" : "lightblue",
+                        "caption" : "lightblue"
+                    },
+                    {
+                        "id" : "moonify",
+                        "caption" : "moonify"
+                    },
+                    {
+                        "id" : "orange",
+                        "caption" : "orange"
+                    },
+                    {
+                        "id" : "pink",
+                        "caption" : "pink"
+                    },
+                    {
+                        "id" : "red",
+                        "caption" : "red"
+                    },
+                    {
+                        "id" : "vista",
+                        "caption" : "vista"
+                    },
+                    {
+                        "id" : "webflat",
+                        "caption" : "webflat"
+                    }
+                ])
+                .setValue("default")
+                .afterUIValueSet("_ctl_comboinput61_afteruivalueset")
+                .onChange([
+                    {
+                        "desc" : "change theme",
+                        "type" : "other",
+                        "target" : "callback",
+                        "args" : [
+                            "{xui.setTheme()}",
+                            undefined,
+                            undefined,
+                            "{args[2]}"
+                        ],
+                        "method" : "call"
+                    }
+                ]),
+                "main"
             );
             
             return children;
